@@ -1,5 +1,8 @@
 export class Quote {
-  id: number;
-  words: string;
-  author: string;
-}
+  constructor(
+  public id: number,
+  public words: string,
+  public author: string
+  )
+  {}
+ }

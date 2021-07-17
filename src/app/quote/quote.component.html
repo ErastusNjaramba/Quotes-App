@@ -2,8 +2,10 @@
   <h1>My Quotes</h1>
   <hr>
   <ul>
-    <li *ngFor='let quote of quotes'>
-      {{quote.words}}
-    </li>
+    <div *ngFor='let quote of quotes;let i = index'>
+    <li>{{quote.words}}</li>
+      <app-quote-detail [addQuote]='quote' (isRead)= 'quoteDelete($event, i)'></app-quote-detail>
+    
+  </div>
   </ul>
 </div>

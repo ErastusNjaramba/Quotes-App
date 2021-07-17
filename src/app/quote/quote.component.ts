@@ -10,14 +10,25 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {id:1, words:'Life is what happens when you`re busy making other plans.',author:'John Lennon'},
-    {id:2,words:'When you reach the end of your rope, tie a knot in it and hang on.',author:'Franklin D. Roosevelt'},
-    {id:3,words:'The future belongs to those who believe in the beauty of their dreams.',author:'Eleanor Roosevelt'},
-    {id:4,words:'Whoever is happy will make others happy too.',author:'Anne Frank'},
-    {id:5,words:'Tell me and I forget. Teach me and I remember. Involve me and I learn.',author:'Benjamin Franklin'},
-    {id:6,words:'In the end, it`s not the years in your life that count. It`s the life in your years. ',author:'Abraham Lincoln'},
+   new Quote (2, 'When you reach the end of your rope, tie a knot in it and hang on.', 'Franklin D. Roosevelt'),
+   new Quote (3, 'The future belongs to those who believe in the beauty of their dreams.', 'Eleanor Roosevelt'),
+   new Quote (1, 'Life is what happens when you`re busy making other plans.', 'John Lennon'),
+   new Quote (4, 'Whoever is happy will make others happy too.', 'Anne Frank'),
+   new Quote (5, 'Tell me and I forget. Teach me and I remember. Involve me and I learn.', 'Benjamin Franklin'),
+   new Quote (6, 'In the end, it`s not the years in your life that count. It`s the life in your years. ', 'Abraham Lincoln'),
   ];
+  
 
+  quoteDelete(isRead, index){
+    if (isRead) {
+      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+      if (toDelete){                          
+        this.quotes.splice(index,1);
+      }
+  }
+}
+
+  
   constructor() { }
 
   ngOnInit() {
