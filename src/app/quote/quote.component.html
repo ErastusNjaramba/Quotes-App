@@ -5,7 +5,7 @@
     <div *ngFor='let quote of quotes;let i = index'>
     <li>{{quote.words}}</li>
       <app-quote-detail [addQuote]='quote' (isRead)= 'quoteDelete($event, i)'></app-quote-detail>
-    
+      by <span id="name"><strong>{{quote.name}}</strong></span>
   </div>
   </ul>
 </div>
