@@ -1,9 +1,11 @@
 <div class="container">
-  <h1>My Quotes</h1>
+  <div class="card-header text-center">
+     <h1>My Quotes</h1>
+  </div>
   <hr>
   <div class="row">
     <div class="col-md-6">
-      <div *ngFor='let quote of quotes;let i = index'>
+      <div *ngFor='let quote of quotes;let i = index' class="quote">
         <div>
           <h4>{{quote.words}}</h4>
         </div>
