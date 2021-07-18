@@ -14,6 +14,12 @@ export class QuoteDetailComponent implements OnInit {
   deleteQuote(read:boolean){
     this.isRead.emit(read);
   }
+  upvote(){
+    this.addQuote.upvote+=1;
+  }
+  downvote(){
+    this.addQuote.downvote+=1;
+  }
   constructor() { }
 
   ngOnInit() {

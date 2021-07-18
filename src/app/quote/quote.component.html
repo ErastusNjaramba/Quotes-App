@@ -1,11 +1,17 @@
-<div>
+<div class="container">
   <h1>My Quotes</h1>
   <hr>
-  <ul>
-    <div *ngFor='let quote of quotes;let i = index'>
-    <li>{{quote.words}}</li>
-      <app-quote-detail [addQuote]='quote' (isRead)= 'quoteDelete($event, i)'></app-quote-detail>
-      by <span id="name"><strong>{{quote.name}}</strong></span>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes;let i = index'>
+        <div>
+          <h4>{{quote.words}}</h4>
+        </div>
+        <div>
+          <app-quote-detail [addQuote]='quote' (isRead)= 'quoteDelete($event, i)'></app-quote-detail>
+          by <span id="name"><strong>{{quote.name}}</strong></span>
+        </div>
+      </div>
+    </div>
   </div>
-  </ul>
 </div>

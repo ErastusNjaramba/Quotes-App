@@ -1,3 +1,12 @@
-<button (click)='deleteQuote(true)'>Delete</button>
-<p>{{addQuote.author}}</p>
+<div class="votes">
+  <button class="btn btn-success" (click)='upvote()'>Like</button>
+  <div id="upVote">Up votes<br>{{addQuote.upvote}}</div>
+  <button class="btn btn-warning" (click)='downvote()'>Dislike</button>
+  <div id="downVote">Down Votes<br>{{addQuote.downvote}}</div>
+  <button class="btn btn-danger" (click)='deleteQuote(true)'>Delete</button>
+</div>
+
+<p>Author: <strong>{{addQuote.author}}</strong></p>
 Posted: {{addQuote.datePosted| dateAgo}} days ago.
+
+

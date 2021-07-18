@@ -4,7 +4,9 @@ export class Quote {
   public name: string,
   public words: string,
   public author: string,
-  public datePosted: Date
+  public datePosted: Date,
+  public upvote: number,
+  public downvote: number
   )
   {}
  }
