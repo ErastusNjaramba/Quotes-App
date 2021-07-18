@@ -18,6 +18,12 @@ export class QuoteComponent implements OnInit {
    new Quote (6, 'Tysha', 'In the end, it`s not the years in your life that count. It`s the life in your years. ', 'Abraham Lincoln',new Date(2021,6,17),0,0),
   ];
   
+  addedQuote(quote){
+    let arraysize = this.quotes.length;
+    quote.id = arraysize+1;
+    quote.datePosted = new Date(quote.datePosted)
+    this.quotes.push(quote)
+  }
 
   quoteDelete(isRead, index){
     if (isRead) {

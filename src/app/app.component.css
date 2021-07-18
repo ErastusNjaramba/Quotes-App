@@ -1,0 +1,9 @@
+.container{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.scrollable{
+  overflow: auto;
+  height: 700px;
+}
